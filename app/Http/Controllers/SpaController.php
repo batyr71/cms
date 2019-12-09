@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class SpaController extends Controller
 {
-  public function index()
+  public function app()
   {
-      return view('spa');
+      return view('app');
+  }
+
+  public function admin()
+  {
+      return view('admin');
   }
 }

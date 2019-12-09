@@ -1,5 +1,10 @@
 <?php
 Auth::routes();
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
-// Route::get('/home', 'HomeController@index')->name('home');
-// https://laravel-news.com/building-vue-spa-laravel-part-2/
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('admin')->group(function () {
+  Route::get('/', 'SpaController@admin');
+  Route::get('{any}', 'SpaController@admin')->where('any', '.*');
+});
+
+Route::get('/{any}', 'SpaController@app')->where('any', '.*');

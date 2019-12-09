@@ -6,7 +6,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import App from './layouts/App'
+import Admin from './layouts/Admin'
 import Hello from './views/Hello'
 import Home from './views/Home'
 
@@ -14,20 +14,20 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/',
-            name: 'home',
+            path: '/admin',
+            name: '/admin',
             component: Home
         },
         {
-            path: '/hello',
-            name: 'hello',
+            path: '/admin/hello',
+            name: '/admin/hello',
             component: Hello,
         },
     ],
 });
 
 const app = new Vue({
-    el: '#app',
-    components: { App },
+    el: '#admin',
+    components: { Admin },
     router,
 });
