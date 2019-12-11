@@ -10,6 +10,8 @@
     <div id="admin">
         <admin></admin>
     </div>
+    <h2>Admin</h2>
+    <a href="/">App</a>
     <script src="{{ mix('js/admin.js') }}"></script>
 </body>
 </html>
